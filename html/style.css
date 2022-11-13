@@ -1,0 +1,8 @@
+.wrapper {
+  background-color: lightgreen;
+  padding: 10px;
+}
+
+.item {
+  text-transform: uppercase;
+}
