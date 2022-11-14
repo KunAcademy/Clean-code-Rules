@@ -1,4 +1,4 @@
-// Mỗi hàm nên có 1 logic duy nhất.
+// Mỗi hàm nên có 1 logic duy nhất. Nên chia nhỏ function cho dễ quản lý
 // Bad
 const plusAndMinusNumber = (number) => {
   const numberIncrease = number + 1; 
@@ -37,3 +37,28 @@ const checkingUser = (name, type) => {
 
   return checkName && checkType ? true : false
 }
+
+// Tên của function nên nói lên logic mà function đó thực hiện
+// Bad
+const addToDate = (date, month) => {
+  // do something
+}
+const date = new Date();
+addToDate(date, 1)
+
+
+// Good
+const addMonthToDate = (date, month) => {
+  // add month
+}
+const date2 = new Date();
+addMonthToDate(date2, 1)
+
+// Tránh sử dụng những từ negative cho việc đặt biến boolean
+//Bad
+const isNotOpen = true;
+const hasNotshowImage = true;
+
+//Good
+const isOpen = false;
+const hasShowImage = false;
